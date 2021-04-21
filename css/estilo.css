@@ -1,0 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=Viga&display=swap');
+
+header{
+	background-color: rgba(0,0,0,0.5);
+}
+
+.titulo1{
+	font-size: 2rem;
+	font-family: 'viga', arial;
+}
+
+.nav-link{
+	font-size: 1.25rem;
+}
+
+.fa-bars{
+	color: #fff;
+	font-size: 1.875rem;
+}
