@@ -12,17 +12,20 @@
 	<!-- CSS -->
 	<link rel="stylesheet" href="css/bootstrap.css">
 	<link rel="stylesheet" href="css/all.css">
+	<link rel="stylesheet" href="css/countdown.css">
 	<link rel="stylesheet" href="css/estilo.css">
 
 	<!-- Javascript -->
 	<script src="js/jquery.js"></script>
 	<script src="js/popper.js"></script>
 	<script src="js/bootstrap.js"></script>
+	<script src="js/jquery.downCount.js"></script>
+	<script src="js/jquery.vide.js"></script>
 </head>
 <body>
 <div class="container-fluid">
 	<!-- start header -->
-	<header>
+	<header class="fixed-top">
 		<nav class="navbar navbar-expand-lg">
 			<div>
 				<a href="#home" class="navbar-brand text-light titulo1">Rocket Industry</a>
@@ -63,7 +66,7 @@
 
 	<!-- start quemsomos -->
 	<section class="container my-5">
-		<div class="card border-secondary">
+		<div class="card border-dark">
 			<img src="images/quemsomos.jpg" class="card-img-top">
 			<div class="card-header bg-secondary text-light">
 				<h2>O que fazemos?</h2>
@@ -71,109 +74,142 @@
 			<div class="card-body">
 				<p>Com base neste crescente conhecimento científico do nosso sistema solar, a NASA está desenvolvendo o foguete e a nave espacial mais avançados para estender a presença humana mais ao espaço do que já fizemos antes. Lançando de um Centro Espacial Kennedy revitalizado na Flórida, o poderoso foguete do Space Launch System da agência irá transportar astronautas a bordo da nave Orion da NASA, passando pela Lua e eventualmente para Marte.</p>
 			</div>
-		</div>
+<!-- 			<img src="images/quemsomos.jpg" class="card-img-bottom">
+ -->		</div>
 	</section>
 
 	<!-- start slideshow -->
-	<section>
-		<div>
-			<figure>
+	<section class="carousel slide carousel-fade no-margin" data-ride="carousel" id="slideshow">
+		
+		<ul class="carousel-indicators">
+			<li data-target="#slideshow" data-slide-to="0" class="active"></li>
+			<li data-target="#slideshow" data-slide-to="1"></li>
+			<li data-target="#slideshow" data-slide-to="2"></li>
+			<li data-target="#slideshow" data-slide-to="3"></li>
+		</ul>
+
+		<div class="carousel-inner">
+			<figure class="carousel-item active">
 				<img src="images/slider-1.jpg" class="img-fluid">
-				<figcaption>
-					<p>SpaceX, é uma empresa de transporte espacial dos Estados Unidos, sediada em Hawthorne, na Califórnia.</p>
+				<figcaption class="carousel-caption">
+					<p class="h3">SpaceX, é uma empresa de transporte espacial dos Estados Unidos, sediada em Hawthorne, na Califórnia.</p>
 				</figcaption>
 			</figure>
-			<figure>
-				<img src="images/slider-2.jpg">
-				<figcaption>
-					<p>Dragon é a designação de uma espaçonave capaz de levar carga e/ou uma tripulação de até sete pessoas à uma órbita terrestre baixa.</p>
+			<figure class="carousel-item">
+				<img src="images/slider-2.jpg" class="img-fluid">
+				<figcaption class="carousel-caption">
+					<p class="h3">Dragon é a designação de uma espaçonave capaz de levar carga e/ou uma tripulação de até sete pessoas à uma órbita terrestre baixa.</p>
 				</figcaption>
 			</figure>
-			<figure>
-				<img src="images/slider-3.jpg">
-				<figcaption>
-					<p>O ônibus espacial foi um sofisticado veículo parcialmente reutilizável usado pela NASA como veículo lançador de satélites, nave para suas missões tripuladas de reparos e aparelhos em órbita no espaço e reabastecimento da Estação Espacial Internacional.</p>
+			<figure class="carousel-item">
+				<img src="images/slider-3.jpg" class="img-fluid">
+				<figcaption class="carousel-caption">
+					<p class="h3">O ônibus espacial foi um sofisticado veículo parcialmente reutilizável usado pela NASA como veículo lançador de satélites, nave para suas missões tripuladas de reparos e aparelhos em órbita no espaço e reabastecimento da Estação Espacial Internacional.</p>
 				</figcaption>
 			</figure>
-			<figure>
-				<img src="images/slider-4.jpg">
-				<figcaption>
-					<p>O ônibus espacial tornou-se o sucessor da nave Apollo usada durante o Projeto Apollo. O ônibus espacial foi lançado pela primeira vez em 1981 e realizou sua última missão em 2011.</p>
+			<figure class="carousel-item">
+				<img src="images/slider-4.jpg" class="img-fluid">
+				<figcaption class="carousel-caption">
+					<p class="h3">O ônibus espacial tornou-se o sucessor da nave Apollo usada durante o Projeto Apollo. O ônibus espacial foi lançado pela primeira vez em 1981 e realizou sua última missão em 2011.</p>
 				</figcaption>
 			</figure>
 		</div>
+
+		<a href="#slideshow" class="carousel-control-prev" data-slide="prev"><span class="carousel-control-prev-icon"></span></a>
+		<a href="#slideshow" class="carousel-control-next" data-slide="next"><span class="carousel-control-next-icon"></span></a>
+
+		<script>
+			$('#slideshow').carousel({
+				interval: 3000
+			});
+		</script>
 	</section>
 
 	<!-- start projetos -->
-	<section>
-		<h2>Nossos Projetos</h2>
-		<p>A NASA já operou e opera inúmeros programas, desde missões interplanetárias a satélites terrestres.</p>
+	<section class="container my-5">
+		<h2 class="text-center font-weight-bold text-uppercase">Nossos Projetos</h2>
+		<p class="text-center py-3">A NASA já operou e opera inúmeros programas, desde missões interplanetárias a satélites terrestres.</p>
 
-		<div>
-			<img src="images/feature-1.jpg">
-			<div>
-				<h5>Programa Mercury</h5>
-			</div>
-			<div>
-				<p>Realizado sob a pressão da concorrência entre os EUA e a União Soviética que existiu durante a Guerra Fria, o Programa Mercury foi iniciado em 1958 e lançou a NASA no caminho da exploração humana do espaço com as missões destinadas a descobrir se o homem poderia sobreviver no espaço sideral. </p>
-			</div>
-			<div >
-				<a href="https://pt.wikipedia.org/wiki/Projeto_Mercury">saiba mais</a>
-			</div>
-		</div>
+		<div class="accordion" id="sanfona">
+			<div class="card-deck">
+				<div class="card border-0">
+					<img src="images/feature-1.jpg" class="card-img-top">
+					<div class="card-header border border-dark">
+						<h5 class="text-center" data-toggle="collapse" data-target="#collapse01" style="cursor: pointer;">Programa Mercury</h5>
+					</div>
+					<div class="collapse" id="collapse01" data-parent="#sanfona">
+						<div class="card-body border-left border-right border-dark">
+							<p>Realizado sob a pressão da concorrência entre os EUA e a União Soviética que existiu durante a Guerra Fria, o Programa Mercury foi iniciado em 1958 e lançou a NASA no caminho da exploração humana do espaço com as missões destinadas a descobrir se o homem poderia sobreviver no espaço sideral. </p>
+						</div>
+						<div class="card-footer border border-dark">
+							<a href="https://pt.wikipedia.org/wiki/Projeto_Mercury" class="btn btn-outline-dark btn-block">saiba mais</a>
+						</div>
+					</div>
+				</div>
 
-		<div>
-			<img src="images/feature-2.jpg">
-			<div>
-				<h5>Ônibus Espacial</h5>
-			</div>
-			<div>
-				<p>O Ônibus Espacial se tornou o foco da NASA no final de 1970 e na década de 1980. Planejados como veículos reutilizáveis, quatro ônibus espaciais foram construídos. O primeiro a ser lançado, em 12 de abril de 1981, foi o Columbia.</p>
-			</div>
-			<div>
-				<a href="https://www.infoescola.com/astronomia/onibus-espacial/">saiba mais</a>
-			</div>
-		</div>
+				<div class="card border-0">
+					<img src="images/feature-2.jpg" class="card-img-top">
+					<div class="card-header border border-dark">
+						<h5 class="text-center" data-toggle="collapse" data-target="#collapse02" style="cursor: pointer;">Ônibus Espacial</h5>
+					</div>
+					<div class="collapse" id="collapse02" data-parent="#sanfona">
+						<div class="card-body border-left border-right border-dark">
+							<p>O Ônibus Espacial se tornou o foco da NASA no final de 1970 e na década de 1980. Planejados como veículos reutilizáveis, quatro ônibus espaciais foram construídos. O primeiro a ser lançado, em 12 de abril de 1981, foi o Columbia.</p>
+						</div>
+						<div class="card-footer border border-dark">
+							<a href="https://www.infoescola.com/astronomia/onibus-espacial/" class="btn btn-outline-dark btn-block">saiba mais</a>
+						</div>
+					</div>
+				</div>
 
-		<div>
-			<img src="images/feature-3.jpg">
-			<div>
-				<h5>News Horizons</h5>
-			</div>
-			<div>
-				<p>New Horizons é uma missão não-tripulada da NASA para estudar o planeta-anão Plutão e o Cinturão de Kuiper. Ela foi a primeira espaçonave a sobrevoar Plutão, e a fotografar suas pequenas luas Caronte, Nix, Hydra, Cérbero e Estige em 14 de julho de 2015.</p>
-			</div>
-			<div>
-				<a href="https://www.nasa.gov/mission_pages/newhorizons/main/index.html">saiba mais</a>
+				<div class="card border-0">
+					<img src="images/feature-3.jpg" class="card-img-top">
+					<div class="card-header border border-dark">
+						<h5 class="text-center" data-toggle="collapse" data-target="#collapse03" style="cursor: pointer;">News Horizons</h5>
+					</div>
+					<div class="collapse" id="collapse03" data-parent="#sanfona">
+						<div class="card-body border-left border-right border-dark">
+							<p>New Horizons é uma missão não-tripulada da NASA para estudar o planeta-anão Plutão e o Cinturão de Kuiper. Ela foi a primeira espaçonave a sobrevoar Plutão, e a fotografar suas pequenas luas Caronte, Nix, Hydra, Cérbero e Estige em 14 de julho de 2015.</p>
+						</div>
+						<div class="card-footer border border-dark">
+							<a href="https://www.nasa.gov/mission_pages/newhorizons/main/index.html" class="btn btn-outline-dark btn-block">saiba mais</a>
+						</div>
+					</div>
+				</div>
 			</div>
 		</div>
 	</section>
 
 	<!-- start contador -->
-	<section>
-		<div>
-			<h2>proximo lançamento</h2>
+	<section class="text-center text-light py-5 no-margin" data-vide-bg="midia/Space-Animation-Background.mp4">
+		<div class="container py-5">
+			<h2 class="text-uppercase pb-5">proximo lançamento</h2>
 
-			<div>
-				<div>
-					<span>00</span><p>dias</p>
+			<div class="row justify-content-center countdown">
+				<div class="col-md-3 col-sm-4 col-6 border p-4">
+					<span class="h1 days">00</span><p class="h3 days_ref">dias</p>
 				</div>
 
-				<div>
-					<span>00</span><p>horas</p>
+				<div class="col-md-3 col-sm-4 col-6 border p-4">
+					<span class="h1 hours">00</span><p class="h3 hours_ref">horas</p>
+				</div>
+ 
+				<div class="col-md-3 col-sm-4 col-6 border p-4">
+					<span class="h1 minutes">00</span><p class="h3 minutes_ref">minutos</p>
 				</div>
 
-				<div>
-					<span>00</span><p>minutos</p>
-				</div>
-
-				<div>
-					<span>00</span><p>segundos</p>
+				<div class="col-md-3 col-sm-4 col-6 border p-4">
+					<span class="h1 seconds">00</span><p class="h3 seconds_ref">segundos</p>
 				</div>
 			</div>
 
-			<p>A nave espacial de carga não-tripulada SpaceX Dragon entrará em órbita, a partir do foguete Falcon 9 do Launch Complex 40 na Estação da Força Aérea de Cabo Canaveral (CCAFS) na Flórida, fornecendo suprimentos e equipamentos para a Estação Espacial Internacional.</p>
+			<p class="h5 mt-5 font-weight-light">A nave espacial de carga não-tripulada SpaceX Dragon entrará em órbita, a partir do foguete Falcon 9 do Launch Complex 40 na Estação da Força Aérea de Cabo Canaveral (CCAFS) na Flórida, fornecendo suprimentos e equipamentos para a Estação Espacial Internacional.</p>
 
+			<script>
+				$('.countdown').downCount({
+					date: '07/14/2021 13:00:00' //inserir data no formato americano
+				});
+			</script>
 		</div>
 	</section>
 	
