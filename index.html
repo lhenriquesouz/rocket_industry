@@ -183,7 +183,7 @@
 	<!-- start contador -->
 	<section class="text-center text-light py-5 no-margin" data-vide-bg="midia/Space-Animation-Background.mp4">
 		<div class="container py-5">
-			<h2 class="text-uppercase pb-5">proximo lançamento</h2>
+			<h2 class="text-uppercase font-weight-bold pb-5">proximo lançamento</h2>
 
 			<div class="row justify-content-center countdown">
 				<div class="col-md-3 col-sm-4 col-6 border p-4">
@@ -193,7 +193,7 @@
 				<div class="col-md-3 col-sm-4 col-6 border p-4">
 					<span class="h1 hours">00</span><p class="h3 hours_ref">horas</p>
 				</div>
- 
+
 				<div class="col-md-3 col-sm-4 col-6 border p-4">
 					<span class="h1 minutes">00</span><p class="h3 minutes_ref">minutos</p>
 				</div>
@@ -214,28 +214,30 @@
 	</section>
 	
 	<!-- start apollo -->
-	<section>
-		<h2>A missão Apollo</h2>
+	<section class="container my-5">
+		<h2 class="text-center font-weight-bold text-uppercase pb-4">A missão Apollo</h2>
 
-		<div>
-			<div>
-				<a href="#">O projeto</a>
-				<a href="#">As missões</a>
-				<a href="#">Foguetes</a>
-				<a href="#">Resultados</a>
+		<div class="row">
+			<div class="list-group col-md-4" id="spy">
+				<a href="#list-01" class="list-group-item list-group-item-action active">O projeto</a>
+				<a href="#list-02" class="list-group-item list-group-item-action">As missões</a>
+				<a href="#list-03" class="list-group-item list-group-item-action">Foguetes</a>
+				<a href="#list-04" class="list-group-item list-group-item-action">Resultados</a>
 			</div>
 
-			<div>
-				<h4>O projeto</h4>
-				<p>O sonho de atingir a Lua representava uma ambição humana antiga, ficcionalizada por muitos autores (cf. "De la Terre à la Lune", de 1865, Júlio Verne, onde um canhão gigante é usado como mecanismo de propulsão), mas tornada possível no século XX, em resultado do avanço tecnológico e científico quer no domínio da aeronáutica, como no da computação automática.</p>
+			<div class="col-md-8 border border-secondary rounded scrollspy" data-spy="scroll" data-target="#spy">
+				<div id="list-01" class="pb-5 mb-5 pt-3">
+					<h4>O projeto</h4>
+					<p>O sonho de atingir a Lua representava uma ambição humana antiga, ficcionalizada por muitos autores (cf. "De la Terre à la Lune", de 1865, Júlio Verne, onde um canhão gigante é usado como mecanismo de propulsão), mas tornada possível no século XX, em resultado do avanço tecnológico e científico quer no domínio da aeronáutica, como no da computação automática.</p>
 
-				<p>Os projetos Mercury, Gemini e Apollo foram uma resposta dos Estados Unidos à URSS, por esta ter posto o satélite Sputnik 1 em órbita e, logo em seguida, ter posto em órbita o primeiro humano, Yuri Gagarin. Em um famoso discurso de 25 de maio de 1961, John F. Kennedy lançou o desafio de, antes de a década terminar, "enviar homens à Lua e retorná-los a salvo".
-				</p>
+					<p>Os projetos Mercury, Gemini e Apollo foram uma resposta dos Estados Unidos à URSS, por esta ter posto o satélite Sputnik 1 em órbita e, logo em seguida, ter posto em órbita o primeiro humano, Yuri Gagarin. Em um famoso discurso de 25 de maio de 1961, John F. Kennedy lançou o desafio de, antes de a década terminar, "enviar homens à Lua e retorná-los a salvo".
+					</p>
 
-				<audio src="midia/Discurso_de_Kennedy.ogg" controls></audio>
-			</div>
+					<audio src="midia/Discurso_de_Kennedy.ogg" controls></audio>
+				</div>
+			
 
-			<div>
+			<div id="list-02" class="pb-5 mb-5">
 				<h4>As missões</h4>
 				<p>Havia, na época da definição do projeto, três possibilidades de voo para a Lua: uma baseada na ideia de um único e imenso foguete que iria decolar da Terra, pousar na Lua e retornar; outra baseada na ideia de rendez-vous (encontro em órbita) na órbita da Terra, em que o foguete encontraria um outro estágio em órbita da Terra; e, finalmente, o rendez-vous lunar, que significa que um pequeno módulo desceria ao solo da Lua e depois encontraria em órbita a nave de retorno. Esta última opção foi a escolhida pelos engenheiros da Nasa para o projeto Apollo.</p>
 
@@ -244,7 +246,7 @@
 				<p>No total, foram feitas onze missões tripuladas no projeto Apollo, e seis delas pousaram na Lua, no total de doze astronautas que caminharam no solo lunar e lá fizeram experimentos científicos.</p>
 			</div>
 
-			<div>
+			<div id="list-03" class="pb-5 mb-5">
 				<h4>Foguetes lançadores</h4>
 				<p>Todas as missões tripuladas Apollo, exceções apenas as Apollo 7, Skylab e Apollo 18, que fizeram uso do Saturno IB, foram lançadas ao espaço com o uso dos gigantescos foguetes Saturno V, de três estágios, 110m de altura, e 2,7 milhões de kg, propelido pelos cinco poderosos motores F-1 do primeiro estágio, mais os motores J-2 dos estágios seguintes.</p>
 
@@ -253,17 +255,18 @@
 				<p>O Módulo de Comando é a cápsula, em formato cônico, que os astronautas ocupavam durante a maior parte da viagem, e era a única parte que reentrava na atmosfera terrestre, caindo de pára-quedas. O Módulo de Serviço continha os equipamentos de manutenção de vida (como os cilindros de oxigênio) e motores. O Módulo Lunar, como o nome indica, servia para a descida no solo lunar e para o regresso à órbita da Lua, para o encontro com os outros dois módulos que lá permaneciam em órbita.</p>
 			</div>
 
-			<div>
+			<div id="list-04">
 				<h4>Resultados do projeto</h4>
 				<p>Neil A. Armstrong, o primeiro homem a pisar na Lua, imortalizou o momento, resumindo muito do que foi o projeto Apollo, na famosa frase: "um pequeno passo para um homem, um salto gigantesco para a humanidade".</p>
 
-				<div>
-					<video src="midia/Ap16_rover.ogv.360p.webm" controls></video>
+				<div class="embed-responsive embed-responsive-16by9">
+					<video src="midia/Ap16_rover.ogv.360p.webm" controls class="embed-responsive-item"></video>
 				</div>
 
 				<p>Desde a missão Apollo 17, em dezembro de 1972, nenhum homem pisou no solo lunar, e muitas das descobertas científicas que poderiam ter sido feitas ficaram adiadas para quando houvesse novamente interesse em desvendá-las.</p>
 
 				<p>É importante lembrar que ainda houve quatro voos que usaram a nave Apollo: Skylab II, III e IV (três missões cujo objetivo era trabalhar na estação espacial estadunidense Skylab) e Apollo 18 (que acoplou com a nave soviética Soyuz 19 e, por isto ficou conhecida como missão Apollo-Soyuz).</p>
+			</div>
 			</div>
 		</div>
 	</section>

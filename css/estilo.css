@@ -32,3 +32,8 @@ header{
 	border-radius: 50%;
 	background-color: #600;
 }
+
+.scrollspy{
+	height: 25rem;
+	overflow: auto;
+}
